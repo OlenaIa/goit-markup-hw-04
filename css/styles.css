@@ -213,7 +213,11 @@ img {
     padding-bottom: 188px;
     text-align: center;
     color: var(--hero-text-color);
-    background-color: var(--hero-footer-backgraund-color);
+
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7) ), url('../images/people-office.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: #434455;
 }
 
 .hero-title {
@@ -271,6 +275,12 @@ img {
     flex-basis: calc((100% - 3*24px) / 4);
 }
 
+.values-icon {
+    display: inline-block;
+
+
+}
+
 /* ================== Сервіс ================== */
 
 .services {
@@ -302,6 +312,31 @@ img {
 .name.ttl,
 .team-item p {
     text-align: center;
+}
+
+.team-item p {
+    margin-bottom: 8px;
+}
+
+.net-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.net-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+}
+
+.net-link:hover,
+.net-link:focus {
+    background-color: var(--activ-hover-color);
 }
 
 .team-content {
