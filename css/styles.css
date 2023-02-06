@@ -246,6 +246,7 @@ img {
 
     color: var(--hero-text-color);
     background-color: var(--button-backgraund-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     font-family: inherit;
     font-weight: 500;
     font-size: inherit;
@@ -256,7 +257,6 @@ img {
 .btn:hover,
 .btn:focus {
     background-color: var(--activ-hover-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* ================= Цінності ================= */
@@ -276,8 +276,13 @@ img {
 }
 
 .values-icon {
-    display: inline-block;
-
+    display: flex;
+    width: 264px;
+    height: 112px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    background-color: var(--secondary-backgraund-color);
 
 }
 
