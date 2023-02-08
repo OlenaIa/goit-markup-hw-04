@@ -14,6 +14,9 @@
     --title-text-color:#2E2F42;
     --hero-text-color: #FFFFFF;
     --footer-text-color: #E7E9FC;
+    --footer-second-text: #FFFFFF;
+    --footer-bg-icon: rgba(255, 255, 255, 0.1);
+    --footer-bg-hover-icon: #31D0AA;
     --primary-backgraund-color: #FFFFFF;
     --hero-footer-backgraund-color: #2E2F42;
     --button-backgraund-color: #4D5AE5;
@@ -22,6 +25,9 @@
     --accent-color: #4D5AE5;
     --logo-footer-second-part: #F4F4FD;
     --hover-text-color-prtfl: #FFFFFF;
+    --border-custumers-link: #8E8F99;
+    --fill-custumer-icon: #AFB1B8;
+    --border-portfolio: #E7E9FC;
     --main-text-font: 'Roboto', sans-serif;
     --logo-text-font: 'Raleway', sans-serif;
 }
@@ -215,9 +221,11 @@ img {
     padding-bottom: 188px;
     text-align: center;
     color: var(--hero-text-color);
-
+    max-width: 1440px;
+    min-height: 600px;
+    margin: 0 auto;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7) ), url('../images/people-office.jpg');
-    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
     background-color: #434455;
 }
@@ -340,18 +348,16 @@ img {
     align-items: center;
     width: 40px;
     height: 40px;
-    
+    border-radius: 50%;
 }
 
-.team-net-item {
+.team-net-link {
     background-color: var(--accent-color);
-    border-radius: 50%;
 }
 
-.net-link:hover,
-.net-link:focus {
+.team-net-link:hover,
+.team-net-link:focus {
     background-color: var(--activ-hover-color);
-    border-radius: 50%;
 }
 
 .team-content {
@@ -385,12 +391,12 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #8E8F99;
+    border: 1px solid var(--border-custumers-link);
     border-radius: 4px;
 }
 
 .custumer-link svg {
-    fill: #AFB1B8;
+    fill: var(--fill-custumer-icon);
 }
 
 .custumer-link:is(:hover, :focus) {
@@ -401,7 +407,7 @@ img {
     fill: var(--activ-hover-color);
 }
 
-/* ==================== Стилізація футера =========== */
+/* ==================== ФУТЕР =========== */
 .ftr {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -411,6 +417,7 @@ img {
 
 .ftr-cntnr {
     display: flex;
+    align-items: baseline;
 }
 
 .ftr-motto {
@@ -424,22 +431,21 @@ img {
 .net-container p {
     margin-bottom: 16px;
     font-weight: 500;
-    color: #FFFFFF;
+    color: var(--footer-second-text);
 }
 
 .ftr-net-list {
     gap: 16px;
 }
 
-.ftr-net-item {
-    background-color: rgba(255, 255, 255, 0.1);
+.ftr-net-link {
+    background-color: var(--footer-bg-icon);
     border-radius: 50%;
 }
 
 .ftr-net-link:hover,
 .ftr-net-link:focus {
-    background-color: #31D0AA;
-    border-radius: 50%;
+    background-color: var(--footer-bg-hover-icon);
 }
 
 /* =============== Портфоліо ===================== */
@@ -501,16 +507,14 @@ img {
     padding-top: 32px;
     padding-bottom: 31px;
     padding-left: 16px;
-    border-bottom: 1px solid #E7E9FC;
-    border-left: 1px solid #E7E9FC;
-    border-right: 1px solid #E7E9FC;
+    border-bottom: 1px solid var(--border-portfolio);
+    border-left: 1px solid var(--border-portfolio);
+    border-right: 1px solid var(--border-portfolio);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-.card:is(:hover, :focus) .card-content {
-    border-bottom: 0.5px solid var(--secondary-backgraund-color);
-    border-left: 0.5px solid var(--secondary-backgraund-color);
-    border-right: 0.5px solid var(--secondary-backgraund-color);
+.card:hover .card-content, 
+.card:focus .card-content {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
